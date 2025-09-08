@@ -1,35 +1,34 @@
 # 🔁 Types of Recursion: Head Recursion in Python
 
 ## 🎯 AIM:
-To write a Python program to demonstrate **Head Recursion** by finding and printing the sequence based on the sum of all digits.
+To write a Python program to display Arithmetic Progression  series by reading the difference between the numbers and limit  using  head recursion.
 
 ## 🧠 ALGORITHM:
 
-1. **Start**
-2. Define a recursive function `fun(num)`
-3. In the function:
-   - Create a recursive call at the **beginning** (Head Recursion)
-   - Print the result after the recursive call
-4. Take input from the user
-6. Call the recursive function
-7. **Stop**
+1. Start the function fun(n, d).
+2. If n is greater than 0, proceed; otherwise, stop.
+3. Call fun(n - d, d) to recursively reduce n by d.
+4. After the recursive call finishes, print the current value of n on the same line.
+5. Read inputs d (step value) and x (starting number).
+6. Call fun(x, d) to display numbers from smallest positive step up to x.
 
 ## 💻 PROGRAM:
 ~~~
-def fun(num):
-    if num < 0 or int(num) != num:
-        return 0
-    elif num == 0:
-        return 0
-    else:
-        return (num % 10) + fun(num//10)
-num= int(input())
-print(fun(num))
+def fun(n,d):
+    if (n > 0):
+        fun(n - d,d)
+        print(n, end=" ")
+ 
+d= int(input())
+x = int(input())
+fun(x,d)
+
 ~~~
 
 ## OUTPUT
-<img width="467" height="220" alt="image" src="https://github.com/user-attachments/assets/d3155e14-cad0-4536-a359-4781912ed199" />
+<img width="1254" height="256" alt="image" src="https://github.com/user-attachments/assets/c49e26d9-1851-4c1a-a8c8-758fd3182596" />
+
 
 
 ## RESULT
-Thus the required ouput is Verified.
+Thus the required head recursion ouput is Verified.
